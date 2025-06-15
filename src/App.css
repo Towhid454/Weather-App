@@ -1,0 +1,129 @@
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body with a soft dark gradient background */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #2c3e50, #34495e); /* Deep navy to steel blue */
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  padding-top: 60px;
+  color: #dddddd;
+}
+
+/* Container wrapper */
+#root {
+  width: 100%;
+  max-width: 500px;
+  padding: 20px;
+}
+
+/* Title */
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #f1f1f1;
+  font-size: 32px;
+  text-shadow: 0 0 2px rgba(255, 255, 255, 0.1);
+}
+
+/* Form styling */
+form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+input[type="text"] {
+  padding: 12px 16px;
+  background-color: #4a5a72; /* dark slate */
+  color: #ffffff;
+  border: 1px solid #6c7a91;
+  border-radius: 12px;
+  width: 70%;
+  font-size: 16px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+input[type="text"]::placeholder {
+  color: #d0d6e0;
+}
+
+input[type="text"]:focus {
+  border-color: #00e0ff;
+  box-shadow: 0 0 8px rgba(0, 224, 255, 0.5);
+}
+
+button {
+  padding: 12px 20px;
+  background-color: #00bcd4;
+  color: #2c3e50;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #008ba3;
+  color: #ffffff;
+}
+
+/* Weather information card */
+.weather-card {
+  background: linear-gradient(145deg, #3a4b61, #2e3d51);
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.weather-card:hover {
+  transform: translateY(-4px);
+}
+
+.weather-card h2 {
+  margin-bottom: 15px;
+  font-size: 24px;
+  color: #f8f8f8;
+}
+
+.weather-card p {
+  font-size: 18px;
+  margin: 8px 0;
+  color: #e0e0e0;
+}
+
+/* Error message */
+.error {
+  text-align: center;
+  font-size: 18px;
+  color: #ff6b6b;
+  margin-top: 20px;
+}
+
+/* Mobile responsive styles */
+@media (max-width: 600px) {
+  input[type="text"] {
+    width: 100%;
+  }
+
+  form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  button {
+    width: 100%;
+  }
+}
